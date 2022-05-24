@@ -44,11 +44,8 @@ export class MessagesService {
     }
 
     deleteMessage(message: string){
-
-        console.log(this._messages)
         const messagesPrev = this._messages.length;
         this._messages = this._messages.filter(n => n.toLowerCase().trim() != message.toLowerCase().trim());
-        console.log(this._messages)
         const messagesNext = this._messages.length;
         return messagesPrev != messagesNext;
     }
